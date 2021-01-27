@@ -19,6 +19,8 @@
 ## Troubleshooting
 * `gnome-session --session=ubuntu --debug`
 * `ps aux | grep gnome`: See how `gdm` invoke `gnome-session`
+* `man gnome-session`
+* `man gnome-shell`
 
 ## References
 * <https://help.ubuntu.com/community/VNC/Servers>: I mainly consulted this page

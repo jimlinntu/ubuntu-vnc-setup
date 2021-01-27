@@ -20,7 +20,7 @@ then
         if which gnome-session >/dev/null
         then
                 # see /usr/share/gnome-session/sessions/ubuntu.session for more info
-                gnome-session --session=ubuntu --debug &
+                dbus-launch --exit-with-session gnome-session --session=ubuntu --debug &
         else
                 MODE="KDE"
         fi
