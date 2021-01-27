@@ -16,6 +16,10 @@
 ## TODO
 - [] There are still some icon missing.
 
+## Troubleshooting
+* `gnome-session --session=ubuntu --debug`
+* `ps aux | grep gnome`: See how `gdm` invoke `gnome-session`
+
 ## References
 * <https://help.ubuntu.com/community/VNC/Servers>: I mainly consulted this page
 * <https://www.cyberciti.biz/faq/install-and-configure-tigervnc-server-on-ubuntu-18-04/>
@@ -37,3 +41,5 @@
 * <https://askubuntu.com/questions/771124/vnc-ubuntu-14-04-destop-dont-show-menus-icon>
 * <https://askubuntu.com/questions/1209511/what-is-a-ubuntu-gnome-session-and-why-isnt-it-a-systemd-user-session>: `gnome-session`'s `--session` arg; `/usr/share/gnome-session/sessions/ubuntu.session`
 * <https://unix.stackexchange.com/questions/345344/difference-between-xorg-and-gnome-kde-xfce>: The relation between GNOME and X (aka X11, X Window Systems)
+* <https://linuxhint.com/how_gnome_starts/>
+* <https://askubuntu.com/questions/971388/few-application-icons-not-appearing-in-ubuntu-dock-after-upgrading-to-ubuntu-17>

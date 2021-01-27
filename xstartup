@@ -4,7 +4,7 @@
 MODE="GNOME"
 
 #Uncommment this line if using Gnome and your keyboard mappings are incorrect.
-export XKL_XMODMAP_DISABLE=1
+# export XKL_XMODMAP_DISABLE=1
 
 # Load X resources (if any)
 if [ -e "$HOME/.Xresources" ]
@@ -12,18 +12,15 @@ then
         xrdb "$HOME/.Xresources"
 fi
 
-unset DBUS_SESSION_BUS_ADDRESS
+export GNOME_SHELL_SESSION_MODE=ubuntu
 
 # Try a GNOME session, or fall back to KDE
 if [ "GNOME" = "$MODE" ]
 then
         if which gnome-session >/dev/null
         then
-                # dbus-launch --exit-with-session x-window-manager &
-                # dbus-launch --exit-with-session vncconfig -iconic &
-                #dbus-launch --exit-with-session gnome-shell &
-                #dbus-launch --exit-with-session gnome-session --session=ubuntu &
-                dbus-launch --exit-with-session gnome-session --autostart /usr/share/gdm/greeter/autostart
+                # see /usr/share/gnome-session/sessions/ubuntu.session for more info
+                gnome-session --session=ubuntu --debug &
         else
                 MODE="KDE"
         fi
