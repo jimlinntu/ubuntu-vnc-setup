@@ -63,3 +63,19 @@
 * <https://unix.stackexchange.com/questions/345344/difference-between-xorg-and-gnome-kde-xfce>: The relation between GNOME and X (aka X11, X Window Systems)
 * <https://linuxhint.com/how_gnome_starts/>
 * <https://askubuntu.com/questions/971388/few-application-icons-not-appearing-in-ubuntu-dock-after-upgrading-to-ubuntu-17>
+* <https://askubuntu.com/questions/1209511/what-is-a-ubuntu-gnome-session-and-why-isnt-it-a-systemd-user-session>: See `/usr/share/xsessions/ubuntu.desktop`
+* <https://unix.stackexchange.com/questions/263922/what-is-the-tryexec-field-in-desktop-files>: `TryExec` in `.desktop` file.
+* <http://manpages.ubuntu.com/manpages/bionic/man1/dbus-launch.1.html>: `dbus-launch --exit-with-session gnome-session`
+* <https://github.com/TigerVNC/tigervnc/issues/1131>: Almost the same error messages as me!
+* <https://stackoverflow.com/questions/17251293/what-is-the-relationship-between-x11-and-gnome>: The relationship between `GNOME` and `X`
+* <https://askubuntu.com/questions/1033004/18-04-how-to-get-wayland-back-after-upgrade-to-18-04>: `/etc/gdm3/custom.conf` `/etc/gdm3/Xsession`
+* <https://specifications.freedesktop.org/desktop-entry-spec/latest/>: `.desktop` specification
+* <https://wiki.archlinux.org/index.php/desktop_entries>
+* <https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>
+    * See `Icon Lookup`
+    * See `/usr/share/icons/hicolor/index.theme`
+* <https://wiki.archlinux.org/index.php/TigerVNC>: Arch Linux doc never fails me.
+* <https://wiki.archlinux.org/index.php/GNOME#GNOME_Shell_themes>
+* <https://gitlab.gnome.org/GNOME/gdm/blob/master/daemon/gdm-x-session.c>: `gdm-x-session`
+* <https://c-nergy.be/blog/?p=12073>
+* <https://unix.stackexchange.com/questions/417906/authentication-is-required-to-create-a-color-profile>: Color profile issue
