@@ -21,6 +21,22 @@
 * `ps aux | grep gnome`: See how `gdm` invoke `gnome-session`
 * `man gnome-session`
 * `man gnome-shell`
+* `man gdm3`: It mentions `/usr/share/xsessions`
+* `apt list --installed | grep gnome`
+    * `gnome-shell-extension-ubuntu-dock`
+* `dbus-daemon`
+* `man vnc.conf`
+* `/etc/vnc.conf`
+* `man vncserver`
+* `man Xsession`
+* `/usr/lib/gdm3/gdm-x-session`
+* `cat /etc/X11/default-display-manager`
+* `vim /etc/X11/Xvnc-session`
+* `vim /etc/X11/Xsession`
+* `/etc/gdm3`
+* `/etc/X11/Xsession.d/20x11-common_process-args`
+* `/etc/X11/Xsession.d/50x11-common_determine-startup`
+    * In my Ubuntu 18.04, `x-session-manager` is an alias to `/etc/alternatives/x-session-manager` (where it eventually point `usr/bin/gnome-session`)
 
 ## References
 * <https://help.ubuntu.com/community/VNC/Servers>: I mainly consulted this page
@@ -30,6 +46,8 @@
 * <https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04>
 * <https://www.teknotut.com/en/install-vnc-server-with-gnome-display-on-ubuntu-18-04/>
 * <https://askubuntu.com/questions/1031147/running-vnc-server-on-ubuntu-desktop-18-04-by-creating-new-sessions/1035321#1035321>
+    * The Gnome session doesn't seem to work on VNC X servers, but an Xvfb will work. The idea is to create an Xvfb for the session and use x11vnc for VNC
+
 * <https://askubuntu.com/questions/281177/colours-background-messed-up-in-vnc-viewer>: VNC quality.
 * <https://askubuntu.com/questions/905466/dropbox-icon-not-working-unable-to-create-dbus-session-bus>
 * <https://askubuntu.com/questions/502837/dbus-folder-in-home-folder-belongs-root>: `~/.dbus/` folder.
