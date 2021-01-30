@@ -12,7 +12,7 @@ then
         xrdb "$HOME/.Xresources"
 fi
 
-export GNOME_SHELL_SESSION_MODE=ubuntu
+export XDG_DATA_DIRS="/usr/share/ubuntu:$XDG_DATA_DIRS"
 
 # Try a GNOME session, or fall back to KDE
 if [ "GNOME" = "$MODE" ]
@@ -20,7 +20,7 @@ then
         if which gnome-session >/dev/null
         then
                 # see /usr/share/gnome-session/sessions/ubuntu.session for more info
-                dbus-launch --exit-with-session gnome-session --session=ubuntu --debug &
+                dbus-launch --exit-with-session env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu --debug &
         else
                 MODE="KDE"
         fi
