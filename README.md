@@ -14,7 +14,8 @@
 * Then you can use your favorite VNC Viewer to connect to `localhost:5901` (`:1` refers to port `5901`)
 
 ## TODO
-- [] There are still some icon missing.
+- [x] There are still some icon missing.
+    - I finally fixed it by tweaking the theme. See <https://askubuntu.com/questions/1311713/can-anyone-help-me-with-my-tigervnc-xstartup-script-for-ubuntu-18-04s-gnome-doc>
 
 ## Troubleshooting
 * `gnome-session --session=ubuntu --debug`
@@ -37,6 +38,8 @@
 * `/etc/X11/Xsession.d/20x11-common_process-args`
 * `/etc/X11/Xsession.d/50x11-common_determine-startup`
     * In my Ubuntu 18.04, `x-session-manager` is an alias to `/etc/alternatives/x-session-manager` (where it eventually point `usr/bin/gnome-session`)
+* `env |grep XDG_DATA_DIRS`: This enviornment variable will control how the `.desktop` file are loaded.
+* `/etc/profile.d/xdg_dirs_desktop_session.sh`: This file explains why `/usr/share/ubuntu` is added in `XDG_DATA_DIRS`
 
 ## References
 * <https://help.ubuntu.com/community/VNC/Servers>: I mainly consulted this page
@@ -79,3 +82,8 @@
 * <https://gitlab.gnome.org/GNOME/gdm/blob/master/daemon/gdm-x-session.c>: `gdm-x-session`
 * <https://c-nergy.be/blog/?p=12073>
 * <https://unix.stackexchange.com/questions/417906/authentication-is-required-to-create-a-color-profile>: Color profile issue
+* <https://askubuntu.com/questions/64283/custom-application-icons-not-displaying>: Icon cache: `gtk-update-icon-cache`
+* <https://itsfoss.com/gnome-tweak-tool/>: `apt install gnome-tweaks`
+* <https://askubuntu.com/questions/779645/ubuntu-software-icon>: `/usr/share/ubuntu/applications/org.gnome.Software.desktop` and `/usr/share/applications/org.gnome.Software.desktop`: I totally not understand why there are two `desktop` file....
+* <https://askubuntu.com/questions/1312020/can-someone-explain-why-there-exist-two-org-gnome-software-desktop-files-which>: The question I ask. I found this related to `XDG_DATA_DIRS`.
+* <https://unix.stackexchange.com/questions/471327/whats-the-right-way-to-add-directories-to-xdg-data-dirs>: `XDG_DATA_DIRS`
