@@ -87,3 +87,4 @@
 * <https://askubuntu.com/questions/779645/ubuntu-software-icon>: `/usr/share/ubuntu/applications/org.gnome.Software.desktop` and `/usr/share/applications/org.gnome.Software.desktop`: I totally not understand why there are two `desktop` file....
 * <https://askubuntu.com/questions/1312020/can-someone-explain-why-there-exist-two-org-gnome-software-desktop-files-which>: The question I ask. I found this related to `XDG_DATA_DIRS`.
 * <https://unix.stackexchange.com/questions/471327/whats-the-right-way-to-add-directories-to-xdg-data-dirs>: `XDG_DATA_DIRS`
+* <https://gitlab.gnome.org/GNOME/gdm/-/blob/97ca4b1268e78a21041d9fda9512b892ce344d92/daemon/gdm-session.c#L2631-2641>: `DESKTOP_SESSION`  is set in this line. However, my ad-hoc `xstartup` was not invoked by `gdm-*` related processes. For more information, please see `gdm_session_start_session` function in that link. (There is a `set_up_session_environment` function).

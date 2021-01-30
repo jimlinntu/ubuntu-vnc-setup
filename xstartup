@@ -12,6 +12,12 @@ then
         xrdb "$HOME/.Xresources"
 fi
 
+# The purpose of this line is to get `Ubuntu Software` properly loaded
+# Because here we do not invoke `gnome-session` by `gdm`, `DESKTOP_SESSION` remains unset.
+# Further, /etc/gdm3/Xsession will invoke all scripts in `/etc/X11/Xsession.d/`,
+# which will set `XDG_DATA_DIRS`, but here we directly invole `gnome-session`.
+# That is why without the below line, `Ubuntu Software` will not be properly loaded
+# (it is in /usr/share/ubuntu/applications/org.gnome.Software.desktop)
 export XDG_DATA_DIRS="/usr/share/ubuntu:$XDG_DATA_DIRS"
 
 # Try a GNOME session, or fall back to KDE
